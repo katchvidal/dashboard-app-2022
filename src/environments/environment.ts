@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    projectId: 'ingresoegresoapp-9b1c1',
+    appId: '1:849019260828:web:172faa22a99ef5c7670259',
+    storageBucket: 'ingresoegresoapp-9b1c1.appspot.com',
+    locationId: 'us-central',
+    apiKey: 'AIzaSyC_gY_pE_9C6v0TfTeaIlKBzqSMZwgftOE',
+    authDomain: 'ingresoegresoapp-9b1c1.firebaseapp.com',
+    messagingSenderId: '849019260828',
+  }
 };
 
 /*
@@ -14,3 +23,10 @@ export const environment = {
  * on performance if an error is thrown.
  */
 // import 'zone.js/plugins/zone-error';  // Included with Angular CLI.
+
+// apiKey: "AIzaSyC_gY_pE_9C6v0TfTeaIlKBzqSMZwgftOE",
+// authDomain: "ingresoegresoapp-9b1c1.firebaseapp.com",
+// projectId: "ingresoegresoapp-9b1c1",
+// storageBucket: "ingresoegresoapp-9b1c1.appspot.com",
+// messagingSenderId: "849019260828",
+// appId: "1:849019260828:web:18aee6c5b1e18106670259"
