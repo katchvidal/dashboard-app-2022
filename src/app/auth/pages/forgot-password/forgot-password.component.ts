@@ -2,12 +2,21 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
-  selector: 'app-sidebar',
-  templateUrl: './sidebar.component.html',
+  selector: 'app-forgot-password',
+  templateUrl: './forgot-password.component.html',
   styles: [
+    `
+    a {
+      cursor: pointer;
+    }
+
+    #send {
+      cursor: pointer;
+    }
+    `
   ]
 })
-export class SidebarComponent implements OnInit {
+export class ForgotPasswordComponent implements OnInit {
 
   constructor(
     public authService: AuthService

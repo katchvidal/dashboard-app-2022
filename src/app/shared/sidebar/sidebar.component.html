@@ -8,13 +8,13 @@
             </a>
         </div>
 
-        <div class="mt-8 text-center">
+        <div class="mt-8 text-center" *ngIf="authService.userData as user">
             <a routerLink="">
                 <img src="https://tailus.io/sources/blocks/stats-cards/preview/images/second_user.webp" alt=""
                     class="w-10 h-10 m-auto rounded-full object-cover lg:w-28 lg:h-28">
             </a>
-            <h5 class="hidden mt-4 text-xl font-semibold text-gray-600 lg:block">Cynthia J. Watts</h5>
-            <span class="hidden text-gray-400 lg:block">Admin</span>
+            <h5 class="hidden mt-4 text-xl font-semibold text-gray-600 lg:block">{{ user.email }} </h5>
+            <!-- <span class="hidden text-gray-400 lg:block">Admin</span> -->
         </div>
 
         <ul class="space-y-2 tracking-wide mt-8">
@@ -42,7 +42,10 @@
                         <path class="fill-current text-gray-600 group-hover:text-cyan-600"
                             d="M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z" />
                     </svg>
-                    <span class="group-hover:text-gray-700">Categories</span>
+                    <a routerLink="ingreso-egreso">
+
+                        <span class="group-hover:text-gray-700">Ingreso / Egreso </span>
+                    </a>
                 </a>
             </li>
             <li>
@@ -54,7 +57,10 @@
                         <path class="fill-current text-gray-300 group-hover:text-cyan-300"
                             d="M15 7h1a2 2 0 012 2v5.5a1.5 1.5 0 01-3 0V7z" />
                     </svg>
-                    <span class="group-hover:text-gray-700">Reports</span>
+                    <a routerLink="estadistica">
+
+                        <span class="group-hover:text-gray-700">Estadistica</span>
+                    </a>
                 </a>
             </li>
             <li>
@@ -90,7 +96,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
             </svg>
-            <span class="group-hover:text-gray-700">Logout</span>
+            <span class="group-hover:text-gray-700"> <a class="list-none" (click)="authService.SignOut()" >  Logout </a> </span>
         </button>
     </div>
 </aside>
